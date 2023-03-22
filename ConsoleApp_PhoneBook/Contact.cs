@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp_PhoneBook {
+    /// <summary>
+    /// Object of contatas
+    /// </summary>
     internal class Contact {
         public string Name { get; set; }
         public string Number { get; set; }

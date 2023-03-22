@@ -7,7 +7,18 @@ using System.Threading.Tasks;
 namespace ConsoleApp_PhoneBook {
     internal class PhoneBook {
 
-        public List<Contact> Contacts { get; set; } = new List<Contact>();
+        public static List<Contact> Contacts { get; set; } = new List<Contact>() {
+                new Contact ("Zbyszek","500500500"),
+
+                new Contact ("Marcin","600660543"),
+
+                new Contact ("Marta","700588543"),
+
+                new Contact ("Adam","800555543"),
+
+                new Contact ("Ania","900544543") 
+
+        };
 
 
 
@@ -39,6 +50,20 @@ namespace ConsoleApp_PhoneBook {
             Contacts.Add(contact);
         }
 
+
+        /// <summary>
+        /// Remove exist contatc
+        /// </summary>
+        /// <param name="contact"></param>
+        public void RemoveContact(string number) {
+            var contact = Contacts.FirstOrDefault(x => x.Number == number);
+            if (contact == null) {
+                Console.WriteLine("Contact not found");
+            }
+            else {
+                Contacts.Remove(contact);
+            }
+        }
 
         /// <summary>
         /// Display contact by searching number
