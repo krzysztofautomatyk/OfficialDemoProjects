@@ -1,0 +1,32 @@
+[
+  {
+    "ID": 1,
+    "PersonID": 1,
+    "Street": "Main St.",
+    "City": "New York"
+  },
+  {
+    "ID": 2,
+    "PersonID": 2,
+    "Street": "Broadway",
+    "City": "Chicago"
+  },
+  {
+    "ID": 3,
+    "PersonID": 4,
+    "Street": "Market St.",
+    "City": "San Francisco"
+  },
+  {
+    "ID": 4,
+    "PersonID": 4,
+    "Street": "Kingsway",
+    "City": "London"
+  },
+  {
+    "ID": 5,
+    "PersonID": 5,
+    "Street": "Champs-Elysees",
+    "City": "Paris"
+  }
+]
