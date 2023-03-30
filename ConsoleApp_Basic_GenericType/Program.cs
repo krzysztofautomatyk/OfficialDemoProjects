@@ -48,7 +48,7 @@ namespace ConsoleApp_Basic_GenericType
             Console.WriteLine($"Conut strings: {countString}");
         }
 
-        static int Count<T>(IEnumerable<T> elements, GenericPredicate<T> predicate)
+        static int Count<T>(IEnumerable<T> elements, GenericPredicate<T> predicate) // Predicate<T> predicate  -> od M$
         {
             int count = 0;
             foreach (T element in elements)
