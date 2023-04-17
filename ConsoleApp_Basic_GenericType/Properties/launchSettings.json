@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ConsoleApp_Basic_GenericType": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:61630;http://localhost:61640"
+    }
+  }
+}
