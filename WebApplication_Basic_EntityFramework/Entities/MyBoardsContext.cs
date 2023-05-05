@@ -35,7 +35,7 @@ namespace WebApplication_Basic_EntityFramework.Entities
             modelBuilder.Entity<WorkItemState>()
                 .Property(x => x.State)
                 .IsRequired()
-                .HasMaxLength(50);
+                .HasMaxLength(60);
 
             modelBuilder.Entity<Epic>()
                 .Property(w => w.EndDate)
