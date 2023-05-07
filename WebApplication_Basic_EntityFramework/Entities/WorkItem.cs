@@ -59,8 +59,8 @@ namespace WebApplication_Basic_EntityFramework.Entities
 
         public List<Tag> Tags { get; set; } = new List<Tag>();
 
-        public WorkItemState  WorkItemState { get; set; }
-        public int WorkItemStateId { get; set; }
+        public WorkItemState  State { get; set; }
+        public int StateId { get; set; }
 
         // This is for the many-to-many relationship between WorkItem and Tag
         // WorkItem is the navigation property, and WorkItemTags is the foreign key

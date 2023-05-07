@@ -38,7 +38,7 @@ if (!user.Any())
     var user1 = new User
     {
         Email = "user1@test.com",
-        Name = "User1",
+        FullName = "User1",
         Password = "123456",
         Role = "User",
 
@@ -53,7 +53,7 @@ if (!user.Any())
     var user2 = new User
     {
         Email = "user2@test.com",
-        Name = "User2",
+        FullName = "User2",
         Password = "123456",
         Role = "User",
 

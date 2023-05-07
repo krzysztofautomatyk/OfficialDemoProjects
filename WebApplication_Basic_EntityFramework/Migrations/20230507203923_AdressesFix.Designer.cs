@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication_Basic_EntityFramework.Entities;
 
@@ -11,9 +12,11 @@ using WebApplication_Basic_EntityFramework.Entities;
 namespace WebApplication_Basic_EntityFramework.Migrations
 {
     [DbContext(typeof(MyBoardsContext))]
-    partial class MyBoardsContextModelSnapshot : ModelSnapshot
+    [Migration("20230507203923_AdressesFix")]
+    partial class AdressesFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -182,17 +185,17 @@ namespace WebApplication_Basic_EntityFramework.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(1);
 
-                    b.Property<int>("StateId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("WorkItemStateId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
 
-                    b.HasIndex("StateId");
+                    b.HasIndex("WorkItemStateId");
 
                     b.ToTable("WorkItems");
 
@@ -333,15 +336,15 @@ namespace WebApplication_Basic_EntityFramework.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebApplication_Basic_EntityFramework.Entities.WorkItemState", "State")
+                    b.HasOne("WebApplication_Basic_EntityFramework.Entities.WorkItemState", "WorkItemState")
                         .WithMany()
-                        .HasForeignKey("StateId")
+                        .HasForeignKey("WorkItemStateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Author");
 
-                    b.Navigation("State");
+                    b.Navigation("WorkItemState");
                 });
 
             modelBuilder.Entity("WebApplication_Basic_EntityFramework.Entities.WorkItemTag", b =>

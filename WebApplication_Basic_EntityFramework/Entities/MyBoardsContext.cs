@@ -93,9 +93,9 @@ namespace WebApplication_Basic_EntityFramework.Entities
                         }
                     );
 
-                eb.HasOne(x => x.WorkItemState)
+                eb.HasOne(x => x.State)
                 .WithMany()
-                .HasForeignKey(x => x.WorkItemStateId);
+                .HasForeignKey(x => x.StateId);
 
             });
 
