@@ -103,6 +103,10 @@ namespace WebApplication_Basic_EntityFramework.Entities
             {
                 eb.Property(x => x.CreatedDate).HasDefaultValueSql("getutcdate()");
                 eb.Property(x => x.UpdatedDate).ValueGeneratedOnUpdate();
+                eb.HasOne(x=> x.Author)
+                    .WithMany(c=>c.Comments)
+                    .HasForeignKey(x => x.AuthorId)
+                    .OnDelete(DeleteBehavior.NoAction);
             });
 
             // Key 1:1
@@ -117,6 +121,26 @@ namespace WebApplication_Basic_EntityFramework.Entities
             //modelBuilder.Entity<WorkItemTag>()
             //    .HasKey(wt => new { wt.WorkItemId, wt.TagId });
 
+
+            // Seed data
+            modelBuilder.Entity<WorkItemState>()
+                .HasData(
+                new WorkItemState { Id = 1, State = "To Do" },
+                new WorkItemState { Id = 2, State = "Doing" },
+                new WorkItemState { Id = 3, State = "Done" }
+                );
+
+            modelBuilder.Entity<Tag>(eb =>
+            {
+                eb.HasData(
+                    new Tag { Id = 1, Value = "Web" },
+                    new Tag { Id = 2, Value = "UI" },
+                    new Tag { Id = 3, Value = "Desktop" },
+                    new Tag { Id = 4, Value = "API" },
+                    new Tag { Id = 5, Value = "Service" } 
+                     
+                    );
+            });
 
         }
 

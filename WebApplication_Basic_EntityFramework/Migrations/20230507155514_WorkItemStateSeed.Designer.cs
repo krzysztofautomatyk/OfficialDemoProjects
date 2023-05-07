@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication_Basic_EntityFramework.Entities;
 
@@ -11,9 +12,11 @@ using WebApplication_Basic_EntityFramework.Entities;
 namespace WebApplication_Basic_EntityFramework.Migrations
 {
     [DbContext(typeof(MyBoardsContext))]
-    partial class MyBoardsContextModelSnapshot : ModelSnapshot
+    [Migration("20230507155514_WorkItemStateSeed")]
+    partial class WorkItemStateSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -103,33 +106,6 @@ namespace WebApplication_Basic_EntityFramework.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Value = "Web"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Value = "UI"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Value = "Desktop"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Value = "API"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Value = "Service"
-                        });
                 });
 
             modelBuilder.Entity("WebApplication_Basic_EntityFramework.Entities.User", b =>

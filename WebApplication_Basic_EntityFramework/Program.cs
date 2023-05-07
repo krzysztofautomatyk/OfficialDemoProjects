@@ -25,12 +25,50 @@ if (app.Environment.IsDevelopment())
 using var scope = app.Services.CreateScope();
 var dbContext = scope.ServiceProvider.GetRequiredService<MyBoardsContext>();
 
-var pendingMigration = dbContext.Database.GetPendingMigrations().Any();
-if(pendingMigration)
+var pendingMigration = dbContext.Database.GetPendingMigrations();
+if(pendingMigration.Any())
 {
     dbContext.Database.Migrate();
 }   
 
+//seed data
+var user = dbContext.Users.ToList();
+if (!user.Any())
+{
+    var user1 = new User
+    {
+        Email = "user1@test.com",
+        Name = "User1",
+        Password = "123456",
+        Role = "User",
+
+
+        Address = new Address()
+        {
+            City = "Warszwa",
+            Street = "Szeroka"
+        }
+
+    };
+    var user2 = new User
+    {
+        Email = "user2@test.com",
+        Name = "User2",
+        Password = "123456",
+        Role = "User",
+
+
+        Address = new Address()
+        {
+            City = "Poznañ",
+            Street = "Nowa"
+        }
+
+    };
+
+    dbContext.Users.AddRange(user1, user2);
+    dbContext.SaveChanges();               
+}
 
 app.Run();
 
