@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp_MvvmToolkit.Views.ProductView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ProductView">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="25"
+            HorizontalOptions="Center"
+            MaximumWidthRequest="450">
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="28"
+                Text="Products" />
+
+            <CollectionView
+                Margin="0,25,0,0"
+                ItemsSource="{Binding Products}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="0,0,0,20"
+                            Stroke="Gainsboro"
+                            StrokeThickness="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Rectangle Grid.Column="0" BackgroundColor="DimGray" />
+
+                                <Grid Grid.Column="1" Padding="20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <VerticalStackLayout Grid.Column="0">
+                                        <Label FontSize="24" Text="{Binding Name}" />
+
+                                        <Label
+                                            Margin="0,5,0,0"
+                                            FontAttributes="Bold"
+                                            FontSize="14"
+                                            Text="{Binding Price}" />
+                                    </VerticalStackLayout>
+
+                                    <Button
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Command="{Binding AddToCartCommand}"
+                                        FontAttributes="Bold"
+                                        Text="Add to Cart" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
