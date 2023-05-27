@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Basic_Depend
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Basic_EntityFramework", "WebApplication_Basic_EntityFramework\WebApplication_Basic_EntityFramework.csproj", "{0B26202B-A900-4574-8A88-5ADCC4B623D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp_MvvmToolkit", "MauiApp_MvvmToolkit\MauiApp_MvvmToolkit.csproj", "{A2606308-6E94-4B53-983A-D39F5C44032E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp_MvvmToolkit", "MauiApp_MvvmToolkit\MauiApp_MvvmToolkit.csproj", "{A2606308-6E94-4B53-983A-D39F5C44032E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication_Basic_API", "WebApplication_Basic_API\WebApplication_Basic_API.csproj", "{53E72E61-4E62-4D59-92EC-338205EAFF9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -239,6 +241,22 @@ Global
 		{A2606308-6E94-4B53-983A-D39F5C44032E}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2606308-6E94-4B53-983A-D39F5C44032E}.Release|x86.Build.0 = Release|Any CPU
 		{A2606308-6E94-4B53-983A-D39F5C44032E}.Release|x86.Deploy.0 = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|x64.Build.0 = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|ARM64.Build.0 = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|x64.ActiveCfg = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|x64.Build.0 = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{53E72E61-4E62-4D59-92EC-338205EAFF9A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
