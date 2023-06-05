@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiApp_MvvmToolkit", "Maui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication_Basic_API", "WebApplication_Basic_API\WebApplication_Basic_API.csproj", "{53E72E61-4E62-4D59-92EC-338205EAFF9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_WorkWithFilePaths", "ConsoleApp_WorkWithFilePaths\ConsoleApp_WorkWithFilePaths.csproj", "{6AAED7A4-B11F-4FAB-8ACA-9DCFC19932F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp_WorkWithFilePaths", "ConsoleApp_WorkWithFilePaths\ConsoleApp_WorkWithFilePaths.csproj", "{6AAED7A4-B11F-4FAB-8ACA-9DCFC19932F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor_WebAssemblyApp_ConnectFourGame", "Blazor_WebAssemblyApp_ConnectFourGame\Blazor_WebAssemblyApp_ConnectFourGame.csproj", "{A0AC03C0-3925-4B31-A215-9AF0D85E141E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -275,6 +277,22 @@ Global
 		{6AAED7A4-B11F-4FAB-8ACA-9DCFC19932F3}.Release|x64.Build.0 = Release|Any CPU
 		{6AAED7A4-B11F-4FAB-8ACA-9DCFC19932F3}.Release|x86.ActiveCfg = Release|Any CPU
 		{6AAED7A4-B11F-4FAB-8ACA-9DCFC19932F3}.Release|x86.Build.0 = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|x64.Build.0 = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|ARM64.Build.0 = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|x64.ActiveCfg = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|x64.Build.0 = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0AC03C0-3925-4B31-A215-9AF0D85E141E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
